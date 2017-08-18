@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"JavaCodeWriter::JavaCodeWriterPackageTests::ProductTarget" /* JavaCodeWriterPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_92 /* Build configuration list for PBXAggregateTarget "JavaCodeWriterPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_95 /* PBXTargetDependency */,
+			);
+			name = JavaCodeWriterPackageTests;
+			productName = JavaCodeWriterPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_49 /* JavaCodeWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* JavaCodeWriterTests.swift */; };
+		OBJ_51 /* JavaCodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "JavaCodeWriter::JavaCodeWriter::Product" /* JavaCodeWriter.framework */; };
+		OBJ_52 /* CodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */; };
+		OBJ_61 /* ClassDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ClassDescription.swift */; };
+		OBJ_62 /* EnumDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* EnumDescription.swift */; };
+		OBJ_63 /* AnnotationDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* AnnotationDescription.swift */; };
+		OBJ_64 /* FileDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* FileDescription.swift */; };
+		OBJ_65 /* ConstructorDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* ConstructorDescription.swift */; };
+		OBJ_66 /* MethodDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* MethodDescription.swift */; };
+		OBJ_67 /* ImportDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* ImportDependency.swift */; };
+		OBJ_68 /* FieldDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* FieldDescription.swift */; };
+		OBJ_69 /* InterfaceDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* InterfaceDescription.swift */; };
+		OBJ_70 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Visibility.swift */; };
+		OBJ_71 /* ClassPropertyWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ClassPropertyWriter.swift */; };
+		OBJ_72 /* ClassWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ClassWriter.swift */; };
+		OBJ_73 /* DocumentationWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* DocumentationWriter.swift */; };
+		OBJ_74 /* EnumWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* EnumWriter.swift */; };
+		OBJ_75 /* ExtensionWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ExtensionWriter.swift */; };
+		OBJ_76 /* FileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* FileWriter.swift */; };
+		OBJ_77 /* InitializerWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* InitializerWriter.swift */; };
+		OBJ_78 /* MethodWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* MethodWriter.swift */; };
+		OBJ_79 /* ProtocolPropertyWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* ProtocolPropertyWriter.swift */; };
+		OBJ_80 /* ProtocolWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* ProtocolWriter.swift */; };
+		OBJ_82 /* CodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */; };
+		OBJ_88 /* CodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* CodeBuilder.swift */; };
+		OBJ_89 /* CodeWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* CodeWriter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3777F4B1F46E1C8006CB4C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CodeWriter::CodeWriter";
+			remoteInfo = CodeWriter;
+		};
+		A3777F4C1F46E1C8006CB4C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "JavaCodeWriter::JavaCodeWriter";
+			remoteInfo = JavaCodeWriter;
+		};
+		A3777F4D1F46E1C8006CB4C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CodeWriter::CodeWriter";
+			remoteInfo = CodeWriter;
+		};
+		A3777F4E1F46E1C8006CB4C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "JavaCodeWriter::JavaCodeWriterTests";
+			remoteInfo = JavaCodeWriterTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"CodeWriter::CodeWriter::Product" /* CodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"JavaCodeWriter::JavaCodeWriter::Product" /* JavaCodeWriter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JavaCodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"JavaCodeWriter::JavaCodeWriterTests::Product" /* JavaCodeWriterTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = JavaCodeWriterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* ClassDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDescription.swift; sourceTree = "<group>"; };
+		OBJ_11 /* EnumDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDescription.swift; sourceTree = "<group>"; };
+		OBJ_12 /* AnnotationDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationDescription.swift; sourceTree = "<group>"; };
+		OBJ_13 /* FileDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDescription.swift; sourceTree = "<group>"; };
+		OBJ_14 /* ConstructorDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorDescription.swift; sourceTree = "<group>"; };
+		OBJ_15 /* MethodDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodDescription.swift; sourceTree = "<group>"; };
+		OBJ_16 /* ImportDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportDependency.swift; sourceTree = "<group>"; };
+		OBJ_17 /* FieldDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldDescription.swift; sourceTree = "<group>"; };
+		OBJ_18 /* InterfaceDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceDescription.swift; sourceTree = "<group>"; };
+		OBJ_19 /* Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
+		OBJ_21 /* ClassPropertyWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPropertyWriter.swift; sourceTree = "<group>"; };
+		OBJ_22 /* ClassWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassWriter.swift; sourceTree = "<group>"; };
+		OBJ_23 /* DocumentationWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationWriter.swift; sourceTree = "<group>"; };
+		OBJ_24 /* EnumWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumWriter.swift; sourceTree = "<group>"; };
+		OBJ_25 /* ExtensionWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionWriter.swift; sourceTree = "<group>"; };
+		OBJ_26 /* FileWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWriter.swift; sourceTree = "<group>"; };
+		OBJ_27 /* InitializerWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerWriter.swift; sourceTree = "<group>"; };
+		OBJ_28 /* MethodWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodWriter.swift; sourceTree = "<group>"; };
+		OBJ_29 /* ProtocolPropertyWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolPropertyWriter.swift; sourceTree = "<group>"; };
+		OBJ_30 /* ProtocolWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWriter.swift; sourceTree = "<group>"; };
+		OBJ_33 /* JavaCodeWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaCodeWriterTests.swift; sourceTree = "<group>"; };
+		OBJ_34 /* DerivedData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DerivedData; sourceTree = SOURCE_ROOT; };
+		OBJ_38 /* CodeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBuilder.swift; sourceTree = "<group>"; };
+		OBJ_39 /* CodeWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeWriter.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_51 /* JavaCodeWriter.framework in Frameworks */,
+				OBJ_52 /* CodeWriter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_82 /* CodeWriter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_20 /* Writers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* ClassPropertyWriter.swift */,
+				OBJ_22 /* ClassWriter.swift */,
+				OBJ_23 /* DocumentationWriter.swift */,
+				OBJ_24 /* EnumWriter.swift */,
+				OBJ_25 /* ExtensionWriter.swift */,
+				OBJ_26 /* FileWriter.swift */,
+				OBJ_27 /* InitializerWriter.swift */,
+				OBJ_28 /* MethodWriter.swift */,
+				OBJ_29 /* ProtocolPropertyWriter.swift */,
+				OBJ_30 /* ProtocolWriter.swift */,
+			);
+			path = Writers;
+			sourceTree = "<group>";
+		};
+		OBJ_31 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_32 /* JavaCodeWriterTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_32 /* JavaCodeWriterTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* JavaCodeWriterTests.swift */,
+			);
+			name = JavaCodeWriterTests;
+			path = Tests/JavaCodeWriterTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_35 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_36 /* CodeWriter */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_36 /* CodeWriter */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_37 /* CodeWriter */,
+			);
+			name = CodeWriter;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_37 /* CodeWriter */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_38 /* CodeBuilder.swift */,
+				OBJ_39 /* CodeWriter.swift */,
+			);
+			name = CodeWriter;
+			path = ".build/checkouts/code-writer-swift.git-7489791545997514195/Sources/CodeWriter";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"JavaCodeWriter::JavaCodeWriterTests::Product" /* JavaCodeWriterTests.xctest */,
+				"JavaCodeWriter::JavaCodeWriter::Product" /* JavaCodeWriter.framework */,
+				"CodeWriter::CodeWriter::Product" /* CodeWriter.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_31 /* Tests */,
+				OBJ_34 /* DerivedData */,
+				OBJ_35 /* Dependencies */,
+				OBJ_40 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* JavaCodeWriter */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* JavaCodeWriter */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Descriptions */,
+				OBJ_20 /* Writers */,
+			);
+			name = JavaCodeWriter;
+			path = Sources/JavaCodeWriter;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Descriptions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* ClassDescription.swift */,
+				OBJ_11 /* EnumDescription.swift */,
+				OBJ_12 /* AnnotationDescription.swift */,
+				OBJ_13 /* FileDescription.swift */,
+				OBJ_14 /* ConstructorDescription.swift */,
+				OBJ_15 /* MethodDescription.swift */,
+				OBJ_16 /* ImportDependency.swift */,
+				OBJ_17 /* FieldDescription.swift */,
+				OBJ_18 /* InterfaceDescription.swift */,
+				OBJ_19 /* Visibility.swift */,
+			);
+			path = Descriptions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"CodeWriter::CodeWriter" /* CodeWriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_84 /* Build configuration list for PBXNativeTarget "CodeWriter" */;
+			buildPhases = (
+				OBJ_87 /* Sources */,
+				OBJ_90 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodeWriter;
+			productName = CodeWriter;
+			productReference = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"JavaCodeWriter::JavaCodeWriter" /* JavaCodeWriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_57 /* Build configuration list for PBXNativeTarget "JavaCodeWriter" */;
+			buildPhases = (
+				OBJ_60 /* Sources */,
+				OBJ_81 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_83 /* PBXTargetDependency */,
+			);
+			name = JavaCodeWriter;
+			productName = JavaCodeWriter;
+			productReference = "JavaCodeWriter::JavaCodeWriter::Product" /* JavaCodeWriter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"JavaCodeWriter::JavaCodeWriterTests" /* JavaCodeWriterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_45 /* Build configuration list for PBXNativeTarget "JavaCodeWriterTests" */;
+			buildPhases = (
+				OBJ_48 /* Sources */,
+				OBJ_50 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_53 /* PBXTargetDependency */,
+				OBJ_55 /* PBXTargetDependency */,
+			);
+			name = JavaCodeWriterTests;
+			productName = JavaCodeWriterTests;
+			productReference = "JavaCodeWriter::JavaCodeWriterTests::Product" /* JavaCodeWriterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "JavaCodeWriter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"JavaCodeWriter::JavaCodeWriterTests" /* JavaCodeWriterTests */,
+				"JavaCodeWriter::JavaCodeWriter" /* JavaCodeWriter */,
+				"CodeWriter::CodeWriter" /* CodeWriter */,
+				"JavaCodeWriter::JavaCodeWriterPackageTests::ProductTarget" /* JavaCodeWriterPackageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_49 /* JavaCodeWriterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_61 /* ClassDescription.swift in Sources */,
+				OBJ_62 /* EnumDescription.swift in Sources */,
+				OBJ_63 /* AnnotationDescription.swift in Sources */,
+				OBJ_64 /* FileDescription.swift in Sources */,
+				OBJ_65 /* ConstructorDescription.swift in Sources */,
+				OBJ_66 /* MethodDescription.swift in Sources */,
+				OBJ_67 /* ImportDependency.swift in Sources */,
+				OBJ_68 /* FieldDescription.swift in Sources */,
+				OBJ_69 /* InterfaceDescription.swift in Sources */,
+				OBJ_70 /* Visibility.swift in Sources */,
+				OBJ_71 /* ClassPropertyWriter.swift in Sources */,
+				OBJ_72 /* ClassWriter.swift in Sources */,
+				OBJ_73 /* DocumentationWriter.swift in Sources */,
+				OBJ_74 /* EnumWriter.swift in Sources */,
+				OBJ_75 /* ExtensionWriter.swift in Sources */,
+				OBJ_76 /* FileWriter.swift in Sources */,
+				OBJ_77 /* InitializerWriter.swift in Sources */,
+				OBJ_78 /* MethodWriter.swift in Sources */,
+				OBJ_79 /* ProtocolPropertyWriter.swift in Sources */,
+				OBJ_80 /* ProtocolWriter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_88 /* CodeBuilder.swift in Sources */,
+				OBJ_89 /* CodeWriter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "JavaCodeWriter::JavaCodeWriter" /* JavaCodeWriter */;
+			targetProxy = A3777F4C1F46E1C8006CB4C6 /* PBXContainerItemProxy */;
+		};
+		OBJ_55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CodeWriter::CodeWriter" /* CodeWriter */;
+			targetProxy = A3777F4D1F46E1C8006CB4C6 /* PBXContainerItemProxy */;
+		};
+		OBJ_83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CodeWriter::CodeWriter" /* CodeWriter */;
+			targetProxy = A3777F4B1F46E1C8006CB4C6 /* PBXContainerItemProxy */;
+		};
+		OBJ_95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "JavaCodeWriter::JavaCodeWriterTests" /* JavaCodeWriterTests */;
+			targetProxy = A3777F4E1F46E1C8006CB4C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = JavaCodeWriter.xcodeproj/JavaCodeWriterTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = JavaCodeWriterTests;
+			};
+			name = Debug;
+		};
+		OBJ_47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = JavaCodeWriter.xcodeproj/JavaCodeWriterTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = JavaCodeWriterTests;
+			};
+			name = Release;
+		};
+		OBJ_58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = JavaCodeWriter.xcodeproj/JavaCodeWriter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = JavaCodeWriter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = JavaCodeWriter;
+			};
+			name = Debug;
+		};
+		OBJ_59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = JavaCodeWriter.xcodeproj/JavaCodeWriter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = JavaCodeWriter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = JavaCodeWriter;
+			};
+			name = Release;
+		};
+		OBJ_85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = JavaCodeWriter.xcodeproj/CodeWriter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CodeWriter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CodeWriter;
+			};
+			name = Debug;
+		};
+		OBJ_86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = JavaCodeWriter.xcodeproj/CodeWriter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CodeWriter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CodeWriter;
+			};
+			name = Release;
+		};
+		OBJ_93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "JavaCodeWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_45 /* Build configuration list for PBXNativeTarget "JavaCodeWriterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_46 /* Debug */,
+				OBJ_47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_57 /* Build configuration list for PBXNativeTarget "JavaCodeWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_58 /* Debug */,
+				OBJ_59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_84 /* Build configuration list for PBXNativeTarget "CodeWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_85 /* Debug */,
+				OBJ_86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_92 /* Build configuration list for PBXAggregateTarget "JavaCodeWriterPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_93 /* Debug */,
+				OBJ_94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
