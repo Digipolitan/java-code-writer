@@ -36,12 +36,11 @@ public struct ConstructorDescription: ImportDependency {
         self.annotations = annotations
         self.throwables = throwables
         self.documentation = documentation
-        self.annotations = []
     }
 
     public func importDependencies() -> [String] {
-        if let annotations = self.annotations as [ImportDependency] {
-            return ConstructorDescription.union(imports: self.imports, with: annotations)
+        if let annotations = self.annotations {
+            return ConstructorDescription.union(imports: self.imports, with: annotations as [ImportDependency])
         }
         return self.imports
     }

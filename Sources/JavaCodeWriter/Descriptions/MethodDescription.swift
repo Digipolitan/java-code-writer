@@ -51,8 +51,8 @@ public struct MethodDescription: ImportDependency {
     }
 
     public func importDependencies() -> [String] {
-        if let annotations = self.annotations as [ImportDependency] {
-            return MethodDescription.union(imports: self.imports, with: annotations)
+        if let annotations = self.annotations {
+            return MethodDescription.union(imports: self.imports, with: annotations as [ImportDependency])
         }
         return self.imports
     }

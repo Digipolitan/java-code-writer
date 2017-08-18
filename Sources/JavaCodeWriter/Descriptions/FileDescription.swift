@@ -9,32 +9,42 @@ import Foundation
 
 public struct FileDescription: ImportDependency {
 
-    public var classes: [ClassDescription]
-    public var enums: [EnumDescription]
-    public var protocols: [ProtocolDescription]
-    public var extensions: [ExtensionDescription]
-    public var methods: [MethodDescription]
-    public var properties: [FieldDescription]
-    public let documentation: String?
+    public let classDescription: ClassDescription?
+    public let enumDescription: EnumDescription?
+    public let interfaceDescription: InterfaceDescription?
+    public let package: String
 
-    public init(documentation: String? = nil) {
-        self.documentation = documentation
-        self.classes = []
-        self.enums = []
-        self.protocols = []
-        self.extensions = []
-        self.methods = []
-        self.properties = []
+    public init(classDescription: ClassDescription, package: String) {
+        self.classDescription = classDescription
+        self.enumDescription = nil
+        self.interfaceDescription = nil
+        self.package = package
+    }
+
+    public init(enumDescription: EnumDescription, package: String) {
+        self.enumDescription = enumDescription
+        self.classDescription = nil
+        self.interfaceDescription = nil
+        self.package = package
+    }
+
+    public init(interfaceDescription: InterfaceDescription, package: String) {
+        self.interfaceDescription = interfaceDescription
+        self.classDescription = nil
+        self.enumDescription = nil
+        self.package = package
     }
 
     public func importDependencies() -> [String] {
-        var dependencies: [ImportDependency] = []
-        dependencies += self.classes as [ImportDependency]
-        dependencies += self.enums as [ImportDependency]
-        dependencies += self.protocols as [ImportDependency]
-        dependencies += self.extensions as [ImportDependency]
-        dependencies += self.methods as [ImportDependency]
-        dependencies += self.properties as [ImportDependency]
-        return FileDescription.union(modules: [], with: dependencies)
+        if let classDescription = self.classDescription {
+            return classDescription.imports
+        }
+        if let enumDescription = self.enumDescription {
+            return enumDescription.imports
+        }
+        if let interfaceDescription = self.interfaceDescription {
+            return interfaceDescription.imports
+        }
+        return []
     }
 }

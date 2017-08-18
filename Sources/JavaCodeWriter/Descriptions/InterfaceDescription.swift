@@ -21,7 +21,7 @@ public struct InterfaceDescription: ImportDependency {
 
     public let name: String
     public let options: Options
-    public var parents: [String]?
+    public let parents: [String]?
     public var imports: [String]
     public var methods: [MethodDescription]
     public var fields: [FieldDescription]
@@ -31,7 +31,7 @@ public struct InterfaceDescription: ImportDependency {
     public var annotations: [AnnotationDescription]
     public let documentation: String?
 
-    public init(name: String, options: Options = Options(), parents: [String] = nil, imports: [String] = [], documentation: String? = nil) {
+    public init(name: String, options: Options = Options(), parents: [String]? = nil, imports: [String] = [], documentation: String? = nil) {
         self.name = name
         self.options = options
         self.parents = parents

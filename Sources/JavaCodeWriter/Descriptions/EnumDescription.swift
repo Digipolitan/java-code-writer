@@ -65,8 +65,6 @@ public struct EnumDescription: ImportDependency {
         dependencies += self.nestedClasses as [ImportDependency]
         dependencies += self.nestedEnums as [ImportDependency]
         dependencies += self.nestedInterfaces as [ImportDependency]
-        var modules = self.modules
-        self.cases.forEach { modules += $0.modules }
         return EnumDescription.union(imports: self.imports, with: dependencies)
     }
 }
