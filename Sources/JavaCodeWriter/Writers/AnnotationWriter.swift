@@ -17,6 +17,17 @@ struct AnnotationWriter: CodeWriter {
     private init() {}
 
     public func write(description: AnnotationDescription, depth: Int) -> String {
-        return ""
+        let builder = CodeBuilder(depth: depth)
+
+        var line = "@"
+        line += description.name
+
+        if let parameter = description.parameter {
+            line += "(\(parameter))"
+        }
+
+        builder.add(string: line, indent: true, crlf: false)
+        
+        return builder.build()
     }
 }

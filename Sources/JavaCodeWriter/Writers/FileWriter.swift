@@ -17,6 +17,24 @@ public struct FileWriter: CodeWriter {
     private init() {}
 
     public func write(description: FileDescription, depth: Int) -> String {
-        return ""
+        let builder = CodeBuilder(depth: depth)
+
+        builder.add(line: "package \(description.package);")
+
+        builder.add(line: "")
+
+        description.importDependencies().forEach { builder.add(line: "import \($0);") }
+
+        builder.add(line: "")
+
+        if let classDescription = description.classDescription {
+            builder.add(string: ClassWriter.default.write(description: classDescription))
+        } else if let enumDescription = description.enumDescription {
+            builder.add(string: EnumWriter.default.write(description: enumDescription))
+        } else if let interfaceDescription = description.interfaceDescription {
+            builder.add(string: InterfaceWriter.default.write(description: interfaceDescription))
+        }
+
+        return builder.build()
     }
 }

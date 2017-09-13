@@ -17,6 +17,44 @@ struct ConstructorWriter: CodeWriter {
     private init() {}
 
     public func write(description: ConstructorDescription, depth: Int) -> String {
-        return ""
+        let builder = CodeBuilder(depth: depth)
+        if let documentation = description.documentation {
+            if documentation.index(of: "\n") != nil {
+                builder.add(string: DocumentationWriter.MultiLine.default.write(documentation: documentation, depth: depth), crlf: true)
+            } else {
+                builder.add(line: DocumentationWriter.SingleLine.default.write(documentation: documentation))
+            }
+        }
+        description.annotations?.forEach { builder.add(line: AnnotationWriter.default.write(description: $0)) }
+
+        var options: [String] = []
+        if description.options.visibility != .default {
+            options.append(description.options.visibility.rawValue)
+        }
+
+        var contructor: String = "\(description.name)("
+        if let parameters = description.parameters {
+            contructor += parameters.joined(separator: ", ")
+        }
+        contructor += ")"
+
+        options.append(contructor)
+
+        if let throwables = description.throwables {
+            options.append("throws")
+            options.append(throwables.joined(separator: ", "))
+        }
+
+        if let impl = description.code {
+            options.append("{")
+            builder.add(line: options.joined(separator: " "))
+            builder.rightTab().add(code: impl).leftTab()
+            builder.add(string: "}", indent: true)
+        } else {
+            builder.add(string: options.joined(separator: " "), indent: true)
+            builder.add(string: ";")
+        }
+
+        return builder.build()
     }
 }

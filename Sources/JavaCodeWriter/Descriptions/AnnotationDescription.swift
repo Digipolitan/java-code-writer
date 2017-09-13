@@ -10,12 +10,12 @@ import Foundation
 public struct AnnotationDescription: ImportDependency {
 
     public let name: String
-    public var argument: String?
+    public var parameter: String?
     public var imports: [String]
 
-    public init(name: String, argument: String, imports: [String] = []) {
+    public init(name: String, parameter: String? = nil, imports: [String] = []) {
         self.name = name
-        self.argument = argument
+        self.parameter = parameter
         self.imports = imports
     }
 
