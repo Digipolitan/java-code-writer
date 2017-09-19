@@ -19,7 +19,7 @@ public struct ConstructorDescription: ImportDependency {
     }
 
     public let name: String
-    public let code: CodeBuilder?
+    public let code: CodeBuilder
     public let options: Options
     public let imports: [String]
     public let parameters: [String]?
@@ -27,7 +27,7 @@ public struct ConstructorDescription: ImportDependency {
     public let throwables: [String]?
     public let documentation: String?
 
-    public init(name: String, code: CodeBuilder? = nil, options: Options = Options(), imports: [String] = [], parameters: [String]? = nil, annotations: [AnnotationDescription]? = nil, throwables: [String]? = nil, documentation: String? = nil) {
+    public init(name: String, code: CodeBuilder = CodeBuilder.from(code: ""), options: Options = Options(), imports: [String] = [], parameters: [String]? = nil, annotations: [AnnotationDescription]? = nil, throwables: [String]? = nil, documentation: String? = nil) {
         self.name = name
         self.code = code
         self.options = options

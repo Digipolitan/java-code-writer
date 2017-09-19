@@ -45,15 +45,10 @@ struct ConstructorWriter: CodeWriter {
             options.append(throwables.joined(separator: ", "))
         }
 
-        if let impl = description.code {
-            options.append("{")
-            builder.add(line: options.joined(separator: " "))
-            builder.rightTab().add(code: impl).leftTab()
-            builder.add(string: "}", indent: true)
-        } else {
-            builder.add(string: options.joined(separator: " "), indent: true)
-            builder.add(string: ";")
-        }
+        options.append("{")
+        builder.add(line: options.joined(separator: " "))
+        builder.rightTab().add(code: description.code).leftTab()
+        builder.add(string: "}", indent: true)
 
         return builder.build()
     }

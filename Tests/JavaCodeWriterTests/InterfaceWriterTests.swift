@@ -23,7 +23,7 @@ class InterfaceWriterTests: XCTestCase {
         var interfaceDescription = InterfaceDescription(name: "Sample")
         interfaceDescription.fields.append(FieldDescription(name: "hello", options: .init(isStatic: true, isFinal: true), type: "String", value: CodeBuilder.from(code: "\"world\"")))
         interfaceDescription.fields.append(FieldDescription(name: "other", options: .init(isStatic: true, isFinal: true), type: "int", value: CodeBuilder.from(code: "0"), documentation: "required field !"))
-        XCTAssertEqual("interface Sample {\n\tstatic final String hello = \"world\";\n\t// required field !\n\tstatic final int other = 0;\n}", InterfaceWriter.default.write(description: interfaceDescription))
+        XCTAssertEqual("interface Sample {\n    static final String hello = \"world\";\n    // required field !\n    static final int other = 0;\n}", InterfaceWriter.default.write(description: interfaceDescription))
     }
 
     func testWriteInterfaceWithAnnotations() {
@@ -33,6 +33,11 @@ class InterfaceWriterTests: XCTestCase {
     }
 
     func testWriteInterfaceWithPropertyAndMethods() {
+        var interfaceDescription = InterfaceDescription(name: "Sample")
+        interfaceDescription.fields.append(.init(name: "hello", type: "int"))
+        interfaceDescription.methods.append(.init(name: "toString", returnType: "String"))
+        interfaceDescription.methods.append(.init(name: "hashCode", returnType: "int"))
+        XCTAssertEqual("interface Sample {\n    int hello;\n\n    String toString();\n\n    int hashCode();\n}", InterfaceWriter.default.write(description: interfaceDescription))
     }
 
     static var allTests = [

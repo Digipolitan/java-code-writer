@@ -52,6 +52,12 @@ struct InterfaceWriter: CodeWriter {
         parts.append(builder.build())
 
         var body: [String] = []
+        if description.fields.count > 0 {
+            body.append(description.fields.map { FieldWriter.default.write(description: $0, depth: depth + 1) }.joined(separator: "\n"))
+        }
+        if description.methods.count > 0 {
+            body.append(description.methods.map { MethodWriter.default.write(description: $0, depth: depth + 1) }.joined(separator: "\n\n"))
+        }
         if description.nestedInterfaces.count > 0 {
             body.append(description.nestedInterfaces.map { InterfaceWriter.default.write(description: $0, depth: depth + 1) }.joined(separator: "\n\n"))
         }
@@ -60,12 +66,6 @@ struct InterfaceWriter: CodeWriter {
         }
         if description.nestedClasses.count > 0 {
             body.append(description.nestedClasses.map { ClassWriter.default.write(description: $0, depth: depth + 1) }.joined(separator: "\n\n"))
-        }
-        if description.fields.count > 0 {
-            body.append(description.fields.map { FieldWriter.default.write(description: $0, depth: depth + 1) }.joined(separator: "\n"))
-        }
-        if description.methods.count > 0 {
-            body.append(description.methods.map { MethodWriter.default.write(description: $0, depth: depth + 1) }.joined(separator: "\n\n"))
         }
         if body.count > 0 {
             parts.append(body.joined(separator: "\n\n"))

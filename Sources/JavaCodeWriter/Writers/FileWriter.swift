@@ -23,9 +23,11 @@ public struct FileWriter: CodeWriter {
 
         builder.add(line: "")
 
-        description.importDependencies().forEach { builder.add(line: "import \($0);") }
-
-        builder.add(line: "")
+        let imports = description.importDependencies()
+        if imports.count > 0 {
+            description.importDependencies().forEach { builder.add(line: "import \($0);") }
+            builder.add(line: "")
+        }
 
         if let classDescription = description.classDescription {
             builder.add(string: ClassWriter.default.write(description: classDescription))

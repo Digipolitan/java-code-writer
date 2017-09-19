@@ -29,7 +29,7 @@ class MethodWriterTests: XCTestCase {
         builder.add(line: "first")
         builder.add(line: "second")
         let methodDescription = MethodDescription(name: "sample", code: builder, returnType: "void")
-        XCTAssertEqual("void sample() {\n\tfirst\n\tsecond\n}", MethodWriter.default.write(description: methodDescription))
+        XCTAssertEqual("void sample() {\n    first\n    second\n}", MethodWriter.default.write(description: methodDescription))
 
     }
 

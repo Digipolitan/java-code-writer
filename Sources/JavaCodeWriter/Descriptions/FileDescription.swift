@@ -37,13 +37,13 @@ public struct FileDescription: ImportDependency {
 
     public func importDependencies() -> [String] {
         if let classDescription = self.classDescription {
-            return classDescription.imports
+            return classDescription.importDependencies()
         }
         if let enumDescription = self.enumDescription {
-            return enumDescription.imports
+            return enumDescription.importDependencies()
         }
         if let interfaceDescription = self.interfaceDescription {
-            return interfaceDescription.imports
+            return interfaceDescription.importDependencies()
         }
         return []
     }

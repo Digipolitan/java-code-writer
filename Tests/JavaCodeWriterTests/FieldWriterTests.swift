@@ -22,12 +22,12 @@ class FieldWriterTests: XCTestCase {
 
     func testFieldWithSingleLineDocumentationWith1Depth() {
         let fieldDescription = FieldDescription(name: "sample", type: "int", documentation: "MyDoc")
-        XCTAssertEqual("\t// MyDoc\n\tint sample;", FieldWriter.default.write(description: fieldDescription, depth: 1))
+        XCTAssertEqual("    // MyDoc\n    int sample;", FieldWriter.default.write(description: fieldDescription, depth: 1))
     }
 
     func testFieldWithMultiLineDocumentationWith1Depth() {
         let fieldDescription = FieldDescription(name: "sample", options: .init(visibility: .public), type: "float", documentation: "MyDoc\nMultiLine")
-        XCTAssertEqual("\t/**\n\t * MyDoc\n\t * MultiLine\n\t */\n\tpublic float sample;", FieldWriter.default.write(description: fieldDescription, depth: 1))
+        XCTAssertEqual("    /**\n     * MyDoc\n     * MultiLine\n     */\n    public float sample;", FieldWriter.default.write(description: fieldDescription, depth: 1))
 
     }
 
