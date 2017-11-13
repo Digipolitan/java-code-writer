@@ -15,12 +15,20 @@ class MethodWriterTests: XCTestCase {
     }
 
     func testWriteStaticOverrideMethodWithParametersAndReturnNoImpl() {
-        let methodDescription = MethodDescription(name: "sample", options: .init(isStatic: true), returnType: "String", parameters: ["Integer p1", "Float p2"], annotations: [AnnotationDescription(name: "Override")])
+        let methodDescription = MethodDescription(name: "sample",
+                                                  options: .init(isStatic: true),
+                                                  returnType: "String",
+                                                  parameters: ["Integer p1", "Float p2"],
+                                                  annotations: [AnnotationDescription(name: "Override")])
         XCTAssertEqual("@Override\nstatic String sample(Integer p1, Float p2);", MethodWriter.default.write(description: methodDescription))
     }
 
     func testWriteMethodWithThrowables() {
-        let methodDescription = MethodDescription(name: "sample", code: CodeBuilder(), options: .init(visibility: .protected), returnType: "void", throwables: ["NullPointerException", "FileNotFoundException"])
+        let methodDescription = MethodDescription(name: "sample",
+                                                  code: CodeBuilder(),
+                                                  options: .init(visibility: .protected),
+                                                  returnType: "void",
+                                                  throwables: ["NullPointerException", "FileNotFoundException"])
         XCTAssertEqual("protected void sample() throws NullPointerException, FileNotFoundException {\n}", MethodWriter.default.write(description: methodDescription))
     }
 
@@ -41,4 +49,3 @@ class MethodWriterTests: XCTestCase {
         ("testMultiLineImpl", testMultiLineImpl)
     ]
 }
-

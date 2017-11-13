@@ -27,7 +27,7 @@ struct AnnotationWriter: CodeWriter {
         }
 
         builder.add(string: line, indent: true, crlf: false)
-        
+
         return builder.build()
     }
 }

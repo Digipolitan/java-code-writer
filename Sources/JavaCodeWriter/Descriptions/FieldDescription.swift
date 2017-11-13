@@ -34,7 +34,13 @@ public struct FieldDescription: ImportDependency {
     public let annotations: [AnnotationDescription]?
     public let documentation: String?
 
-    public init(name: String, options: Options = Options(), type: String, imports: [String] = [], value: CodeBuilder? = nil, annotations: [AnnotationDescription]? = nil, documentation: String? = nil) {
+    public init(name: String,
+                options: Options = Options(),
+                type: String,
+                imports: [String] = [],
+                value: CodeBuilder? = nil,
+                annotations: [AnnotationDescription]? = nil,
+                documentation: String? = nil) {
         self.name = name
         self.options = options
         self.type = type

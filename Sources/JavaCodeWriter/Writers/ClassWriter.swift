@@ -91,4 +91,3 @@ struct ClassWriter: CodeWriter {
         return parts.joined(separator: "\n")
     }
 }
-

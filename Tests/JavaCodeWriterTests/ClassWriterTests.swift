@@ -41,13 +41,13 @@ class ClassWriterTests: XCTestCase {
         classDescription.methods.append(.init(name: "toString", code: CodeBuilder.from(code: "return \"\";"), returnType: "String"))
         XCTAssertEqual("class Sample {\n    Toto toto;\n\n    Sample() {\n    }\n\n    String toString() {\n        return \"\";\n    }\n}", ClassWriter.default.write(description: classDescription))
     }
-    
+
     static var allTests = [
         ("testWriteEmptyClassWithDocumentation", testWriteEmptyClassWithDocumentation),
         ("testWriteEmptyPublicClassWithExtends", testWriteEmptyPublicClassWithExtends),
         ("testWriteEmptyClassWithExtendsAnd2Implements", testWriteEmptyClassWithExtendsAnd2Implements),
         ("testWriteEmptyClassWithImplementsOnly", testWriteEmptyClassWithImplementsOnly),
         ("testWriteClassWith2Fields", testWriteClassWith2Fields),
-        ("testWriteClassWithFieldAndMethods", testWriteClassWithFieldAndMethods),
+        ("testWriteClassWithFieldAndMethods", testWriteClassWithFieldAndMethods)
     ]
 }
