@@ -34,5 +34,3 @@ class ConstructorWriterTests: XCTestCase {
         ("testMultiLineImplWIthParameters", testMultiLineImplWIthParameters)
     ]
 }
-
-

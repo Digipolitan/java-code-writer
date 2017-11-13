@@ -13,7 +13,7 @@ public protocol ImportDependency {
 }
 
 public extension ImportDependency {
-    
+
     public static func union(imports: [String], with dependencies: [ImportDependency]) -> [String] {
         var res = Set<String>(imports)
         dependencies.forEach { res.formUnion($0.importDependencies()) }

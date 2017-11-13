@@ -1,0 +1,5 @@
+line_length: 200
+cyclomatic_complexity: 15
+function_body_length: 45
+excluded:
+  - .build

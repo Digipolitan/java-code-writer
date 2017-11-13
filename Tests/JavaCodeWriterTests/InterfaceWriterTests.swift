@@ -22,8 +22,13 @@ class InterfaceWriterTests: XCTestCase {
     func testWriteInterfaceWith2Properties() {
         var interfaceDescription = InterfaceDescription(name: "Sample")
         interfaceDescription.fields.append(FieldDescription(name: "hello", options: .init(isStatic: true, isFinal: true), type: "String", value: CodeBuilder.from(code: "\"world\"")))
-        interfaceDescription.fields.append(FieldDescription(name: "other", options: .init(isStatic: true, isFinal: true), type: "int", value: CodeBuilder.from(code: "0"), documentation: "required field !"))
-        XCTAssertEqual("interface Sample {\n    static final String hello = \"world\";\n    // required field !\n    static final int other = 0;\n}", InterfaceWriter.default.write(description: interfaceDescription))
+        interfaceDescription.fields.append(FieldDescription(name: "other",
+                                                            options: .init(isStatic: true, isFinal: true),
+                                                            type: "int",
+                                                            value: CodeBuilder.from(code: "0"),
+                                                            documentation: "required field !"))
+        XCTAssertEqual("interface Sample {\n    static final String hello = \"world\";\n    // required field !\n    static final int other = 0;\n}",
+                       InterfaceWriter.default.write(description: interfaceDescription))
     }
 
     func testWriteInterfaceWithAnnotations() {
@@ -49,4 +54,3 @@ class InterfaceWriterTests: XCTestCase {
         ("testWriteInterfaceWithPropertyAndMethods", testWriteInterfaceWithPropertyAndMethods)
     ]
 }
-

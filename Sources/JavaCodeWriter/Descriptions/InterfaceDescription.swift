@@ -56,4 +56,3 @@ public struct InterfaceDescription: ImportDependency {
         return InterfaceDescription.union(imports: self.imports, with: dependencies)
     }
 }
-

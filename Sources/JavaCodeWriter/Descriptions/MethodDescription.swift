@@ -38,7 +38,15 @@ public struct MethodDescription: ImportDependency {
     public let throwables: [String]?
     public let documentation: String?
 
-    public init(name: String, code: CodeBuilder? = nil, options: Options = Options(), returnType: String, imports: [String] = [], parameters: [String]? = nil, annotations: [AnnotationDescription]? = nil, throwables: [String]? = nil, documentation: String? = nil) {
+    public init(name: String,
+                code: CodeBuilder? = nil,
+                options: Options = Options(),
+                returnType: String,
+                imports: [String] = [],
+                parameters: [String]? = nil,
+                annotations: [AnnotationDescription]? = nil,
+                throwables: [String]? = nil,
+                documentation: String? = nil) {
         self.name = name
         self.code = code
         self.options = options

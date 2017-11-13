@@ -68,4 +68,3 @@ public struct EnumDescription: ImportDependency {
         return EnumDescription.union(imports: self.imports, with: dependencies)
     }
 }
-

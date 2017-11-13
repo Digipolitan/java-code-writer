@@ -19,4 +19,3 @@ class AnnotationWriterTests: XCTestCase {
         ("testWriteAnnotationWithParameter", testWriteAnnotationWithParameter)
     ]
 }
-

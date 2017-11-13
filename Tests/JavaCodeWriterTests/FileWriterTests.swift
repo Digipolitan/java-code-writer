@@ -4,7 +4,7 @@ import XCTest
 class FileWriterTests: XCTestCase {
 
     func testWriteEnumFile() {
-        var enumDescription = EnumDescription(name: "Sample");
+        var enumDescription = EnumDescription(name: "Sample")
         enumDescription.cases.append(.init(name: "CASE1"))
         enumDescription.cases.append(.init(name: "CASE2"))
         let fileDescription = FileDescription(enumDescription: enumDescription, package: "com.app")
